@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>elasticsearch学习 | x14n</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="stylesheet" href="/x14n-blog/styles/custom.css">
+    <meta name="description" content="STAY HUNGER,STAY FOOLISH">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/x14n-blog/assets/css/0.styles.c5be36f0.css" as="style"><link rel="preload" href="/x14n-blog/assets/js/app.0bf6b832.js" as="script"><link rel="preload" href="/x14n-blog/assets/js/7.5ae92d3c.js" as="script"><link rel="preload" href="/x14n-blog/assets/js/2.f34688e4.js" as="script"><link rel="preload" href="/x14n-blog/assets/js/1.8dfff511.js" as="script"><link rel="preload" href="/x14n-blog/assets/js/39.6bac3f2d.js" as="script"><link rel="prefetch" href="/x14n-blog/assets/js/10.80b19368.js"><link rel="prefetch" href="/x14n-blog/assets/js/11.eca95232.js"><link rel="prefetch" href="/x14n-blog/assets/js/14.65ec719e.js"><link rel="prefetch" href="/x14n-blog/assets/js/15.55722028.js"><link rel="prefetch" href="/x14n-blog/assets/js/16.11e89e57.js"><link rel="prefetch" href="/x14n-blog/assets/js/17.072265ce.js"><link rel="prefetch" href="/x14n-blog/assets/js/18.9264737b.js"><link rel="prefetch" href="/x14n-blog/assets/js/19.68ab4bad.js"><link rel="prefetch" href="/x14n-blog/assets/js/20.6cd93213.js"><link rel="prefetch" href="/x14n-blog/assets/js/21.b972a304.js"><link rel="prefetch" href="/x14n-blog/assets/js/22.bb58b275.js"><link rel="prefetch" href="/x14n-blog/assets/js/23.f4963f8f.js"><link rel="prefetch" href="/x14n-blog/assets/js/24.1d11efd9.js"><link rel="prefetch" href="/x14n-blog/assets/js/25.546aba52.js"><link rel="prefetch" href="/x14n-blog/assets/js/26.dfc21ea4.js"><link rel="prefetch" href="/x14n-blog/assets/js/27.5a57dd7f.js"><link rel="prefetch" href="/x14n-blog/assets/js/28.3f595efb.js"><link rel="prefetch" href="/x14n-blog/assets/js/29.69202bc7.js"><link rel="prefetch" href="/x14n-blog/assets/js/3.0854eb75.js"><link rel="prefetch" href="/x14n-blog/assets/js/30.e344efe0.js"><link rel="prefetch" href="/x14n-blog/assets/js/31.49ac6ce7.js"><link rel="prefetch" href="/x14n-blog/assets/js/32.71f0bab9.js"><link rel="prefetch" href="/x14n-blog/assets/js/33.720bfc4b.js"><link rel="prefetch" href="/x14n-blog/assets/js/34.9529d302.js"><link rel="prefetch" href="/x14n-blog/assets/js/35.c8ef20b8.js"><link rel="prefetch" href="/x14n-blog/assets/js/36.4604d668.js"><link rel="prefetch" href="/x14n-blog/assets/js/37.17c601a5.js"><link rel="prefetch" href="/x14n-blog/assets/js/38.62b174a4.js"><link rel="prefetch" href="/x14n-blog/assets/js/4.afe772ca.js"><link rel="prefetch" href="/x14n-blog/assets/js/40.9b7689f4.js"><link rel="prefetch" href="/x14n-blog/assets/js/41.71a9acde.js"><link rel="prefetch" href="/x14n-blog/assets/js/42.6baf99f1.js"><link rel="prefetch" href="/x14n-blog/assets/js/43.57ecda17.js"><link rel="prefetch" href="/x14n-blog/assets/js/44.4d583ca3.js"><link rel="prefetch" href="/x14n-blog/assets/js/45.ea6eb053.js"><link rel="prefetch" href="/x14n-blog/assets/js/46.bc05fd53.js"><link rel="prefetch" href="/x14n-blog/assets/js/47.0fd2464d.js"><link rel="prefetch" href="/x14n-blog/assets/js/48.2975a75b.js"><link rel="prefetch" href="/x14n-blog/assets/js/49.26cad6d0.js"><link rel="prefetch" href="/x14n-blog/assets/js/5.9fe33567.js"><link rel="prefetch" href="/x14n-blog/assets/js/50.57500091.js"><link rel="prefetch" href="/x14n-blog/assets/js/51.f5dbef1f.js"><link rel="prefetch" href="/x14n-blog/assets/js/52.e7d420ca.js"><link rel="prefetch" href="/x14n-blog/assets/js/53.0879498a.js"><link rel="prefetch" href="/x14n-blog/assets/js/54.895bb4c8.js"><link rel="prefetch" href="/x14n-blog/assets/js/55.d59355f6.js"><link rel="prefetch" href="/x14n-blog/assets/js/56.5e5b07d2.js"><link rel="prefetch" href="/x14n-blog/assets/js/57.081c5d83.js"><link rel="prefetch" href="/x14n-blog/assets/js/58.7ad565b8.js"><link rel="prefetch" href="/x14n-blog/assets/js/59.1d98445b.js"><link rel="prefetch" href="/x14n-blog/assets/js/6.269dc953.js"><link rel="prefetch" href="/x14n-blog/assets/js/60.0dbd0de1.js"><link rel="prefetch" href="/x14n-blog/assets/js/61.055e152a.js"><link rel="prefetch" href="/x14n-blog/assets/js/62.75ea8725.js"><link rel="prefetch" href="/x14n-blog/assets/js/63.aa769f87.js"><link rel="prefetch" href="/x14n-blog/assets/js/64.6108248c.js"><link rel="prefetch" href="/x14n-blog/assets/js/65.ccb1e39b.js"><link rel="prefetch" href="/x14n-blog/assets/js/66.b1045178.js"><link rel="prefetch" href="/x14n-blog/assets/js/67.4d1253cd.js"><link rel="prefetch" href="/x14n-blog/assets/js/68.fb3c884b.js"><link rel="prefetch" href="/x14n-blog/assets/js/69.028eae9e.js"><link rel="prefetch" href="/x14n-blog/assets/js/70.d2879234.js"><link rel="prefetch" href="/x14n-blog/assets/js/71.319d9b8b.js"><link rel="prefetch" href="/x14n-blog/assets/js/72.05f2fbd9.js"><link rel="prefetch" href="/x14n-blog/assets/js/73.14e4ad11.js"><link rel="prefetch" href="/x14n-blog/assets/js/74.48c9a3e7.js"><link rel="prefetch" href="/x14n-blog/assets/js/75.e616032b.js"><link rel="prefetch" href="/x14n-blog/assets/js/76.61b598b4.js"><link rel="prefetch" href="/x14n-blog/assets/js/77.0af3c7a6.js"><link rel="prefetch" href="/x14n-blog/assets/js/78.3101f2e5.js"><link rel="prefetch" href="/x14n-blog/assets/js/79.88317f3c.js"><link rel="prefetch" href="/x14n-blog/assets/js/8.fa1c2b35.js"><link rel="prefetch" href="/x14n-blog/assets/js/80.a1c43ff4.js"><link rel="prefetch" href="/x14n-blog/assets/js/9.e2c14be6.js"><link rel="prefetch" href="/x14n-blog/assets/js/vendors~docsearch.0bf5d0c2.js">
+    <link rel="stylesheet" href="/x14n-blog/assets/css/0.styles.c5be36f0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>x14n</h3> <p class="description" data-v-59e6cb88>STAY HUNGER,STAY FOOLISH</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>x14n</span>
+          
+        <span data-v-59e6cb88>2021 - </span>
+        2023
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/x14n-blog/" class="home-link router-link-active"><img src="/x14n-blog/lp.png" alt="x14n" class="logo"> <span class="site-name">x14n</span></a> <div class="links"><!----> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/x14n-blog/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/x14n-blog/categories/linux/" class="nav-link"><i class="undefined"></i>
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/x14n-blog/categories/go/" class="nav-link"><i class="undefined"></i>
+  go
+</a></li><li class="dropdown-item"><!----> <a href="/x14n-blog/categories/java/" class="nav-link"><i class="undefined"></i>
+  java
+</a></li><li class="dropdown-item"><!----> <a href="/x14n-blog/categories/other/" class="nav-link"><i class="undefined"></i>
+  other
+</a></li><li class="dropdown-item"><!----> <a href="/x14n-blog/categories/spring/" class="nav-link"><i class="undefined"></i>
+  spring
+</a></li><li class="dropdown-item"><!----> <a href="/x14n-blog/categories/分布式/" class="nav-link"><i class="undefined"></i>
+  分布式
+</a></li><li class="dropdown-item"><!----> <a href="/x14n-blog/categories/springboot/" class="nav-link"><i class="undefined"></i>
+  springboot
+</a></li><li class="dropdown-item"><!----> <a href="/x14n-blog/categories/缓存/" class="nav-link"><i class="undefined"></i>
+  缓存
+</a></li><li class="dropdown-item"><!----> <a href="/x14n-blog/categories/前端/" class="nav-link"><i class="undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/x14n-blog/categories/工具/" class="nav-link"><i class="undefined"></i>
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/x14n-blog/categories/数据库/" class="nav-link"><i class="undefined"></i>
+  数据库
+</a></li></ul></div></div><div class="nav-item"><a href="/x14n-blog/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/x14n-blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="https://github.com/XianCH" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><img src="/x14n-blog/lp.png" alt="author-avatar" class="personal-img" data-v-1fad0c41> <h3 class="name" data-v-1fad0c41>
+    x14n
+  </h3> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>39</h3> <h6 data-v-1fad0c41>Articles</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>32</h3> <h6 data-v-1fad0c41>Tags</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/x14n-blog/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/x14n-blog/categories/linux/" class="nav-link"><i class="undefined"></i>
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/x14n-blog/categories/go/" class="nav-link"><i class="undefined"></i>
+  go
+</a></li><li class="dropdown-item"><!----> <a href="/x14n-blog/categories/java/" class="nav-link"><i class="undefined"></i>
+  java
+</a></li><li class="dropdown-item"><!----> <a href="/x14n-blog/categories/other/" class="nav-link"><i class="undefined"></i>
+  other
+</a></li><li class="dropdown-item"><!----> <a href="/x14n-blog/categories/spring/" class="nav-link"><i class="undefined"></i>
+  spring
+</a></li><li class="dropdown-item"><!----> <a href="/x14n-blog/categories/分布式/" class="nav-link"><i class="undefined"></i>
+  分布式
+</a></li><li class="dropdown-item"><!----> <a href="/x14n-blog/categories/springboot/" class="nav-link"><i class="undefined"></i>
+  springboot
+</a></li><li class="dropdown-item"><!----> <a href="/x14n-blog/categories/缓存/" class="nav-link"><i class="undefined"></i>
+  缓存
+</a></li><li class="dropdown-item"><!----> <a href="/x14n-blog/categories/前端/" class="nav-link"><i class="undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/x14n-blog/categories/工具/" class="nav-link"><i class="undefined"></i>
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/x14n-blog/categories/数据库/" class="nav-link"><i class="undefined"></i>
+  数据库
+</a></li></ul></div></div><div class="nav-item"><a href="/x14n-blog/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/x14n-blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="https://github.com/XianCH" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>elasticsearch学习</h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>x14n</span>
+          
+        <span data-v-59e6cb88>2021 - </span>
+        2023
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">elasticsearch学习</h1> <div data-v-8a445198><i class="iconfont reco-account" data-v-8a445198><span data-v-8a445198>x14n</span></i> <i class="iconfont reco-date" data-v-8a445198><span data-v-8a445198>9/13/2022</span></i> <!----> <i class="tags iconfont reco-tag" data-v-8a445198><span class="tag-item" data-v-8a445198>elasticsearch</span><span class="tag-item" data-v-8a445198>分布式</span></i></div></div> <div class="theme-reco-content content__default"><h1 id="_1-部署单点es"><a href="#_1-部署单点es" class="header-anchor">#</a> 1.部署单点es</h1> <h2 id="_1-1-创建网络"><a href="#_1-1-创建网络" class="header-anchor">#</a> 1.1.创建网络</h2> <p>因为我们还需要部署kibana容器，因此需要让es和kibana容器互联。这里先创建一个网络：</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">docker</span> network create es-net
+</code></pre></div><h2 id="_1-2-加载镜像"><a href="#_1-2-加载镜像" class="header-anchor">#</a> 1.2.加载镜像</h2> <p>这里我们采用elasticsearch的7.12.1版本的镜像，这个镜像体积非常大，接近1G。不建议大家自己pull。</p> <p>课前资料提供了镜像的tar包：</p> <p><img src="/x14n-blog/assets/img/image-20210510165308064.34766b9e.png" alt="image-20210510165308064"></p> <p>大家将其上传到虚拟机中，然后运行命令加载即可：</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># 导入数据</span>
+<span class="token function">docker</span> load <span class="token parameter variable">-i</span> es.tar
+</code></pre></div><p>同理还有<code>kibana</code>的tar包也需要这样做。</p> <h2 id="_1-3-运行"><a href="#_1-3-运行" class="header-anchor">#</a> 1.3.运行</h2> <p>运行docker命令，部署单点es：</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">docker</span> run <span class="token parameter variable">-d</span> <span class="token punctuation">\</span>
+	<span class="token parameter variable">--name</span> es <span class="token punctuation">\</span>
+    <span class="token parameter variable">-e</span> <span class="token string">&quot;ES_JAVA_OPTS=-Xms512m -Xmx512m&quot;</span> <span class="token punctuation">\</span>
+    <span class="token parameter variable">-e</span> <span class="token string">&quot;discovery.type=single-node&quot;</span> <span class="token punctuation">\</span>
+    <span class="token parameter variable">-v</span> es-data:/usr/share/elasticsearch/data <span class="token punctuation">\</span>
+    <span class="token parameter variable">-v</span> es-plugins:/usr/share/elasticsearch/plugins <span class="token punctuation">\</span>
+    <span class="token parameter variable">--privileged</span> <span class="token punctuation">\</span>
+    <span class="token parameter variable">--network</span> es-net <span class="token punctuation">\</span>
+    <span class="token parameter variable">-p</span> <span class="token number">9200</span>:9200 <span class="token punctuation">\</span>
+    <span class="token parameter variable">-p</span> <span class="token number">9300</span>:9300 <span class="token punctuation">\</span>
+elasticsearch:7.12.1
+</code></pre></div><p>命令解释：</p> <ul><li><code>-e &quot;cluster.name=es-docker-cluster&quot;</code>：设置集群名称</li> <li><code>-e &quot;http.host=0.0.0.0&quot;</code>：监听的地址，可以外网访问</li> <li><code>-e &quot;ES_JAVA_OPTS=-Xms512m -Xmx512m&quot;</code>：内存大小</li> <li><code>-e &quot;discovery.type=single-node&quot;</code>：非集群模式</li> <li><code>-v es-data:/usr/share/elasticsearch/data</code>：挂载逻辑卷，绑定es的数据目录</li> <li><code>-v es-logs:/usr/share/elasticsearch/logs</code>：挂载逻辑卷，绑定es的日志目录</li> <li><code>-v es-plugins:/usr/share/elasticsearch/plugins</code>：挂载逻辑卷，绑定es的插件目录</li> <li><code>--privileged</code>：授予逻辑卷访问权</li> <li><code>--network es-net</code> ：加入一个名为es-net的网络中</li> <li><code>-p 9200:9200</code>：端口映射配置</li></ul> <p>在浏览器中输入：http://192.168.150.101:9200 即可看到elasticsearch的响应结果：</p> <p><img src="/x14n-blog/assets/img/image-20210506101053676.fb7a0dcd.png" alt="image-20210506101053676"></p> <h1 id="_2-部署kibana"><a href="#_2-部署kibana" class="header-anchor">#</a> 2.部署kibana</h1> <p>kibana可以给我们提供一个elasticsearch的可视化界面，便于我们学习。</p> <h2 id="_2-1-部署"><a href="#_2-1-部署" class="header-anchor">#</a> 2.1.部署</h2> <p>运行docker命令，部署kibana</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">docker</span> run <span class="token parameter variable">-d</span> <span class="token punctuation">\</span>
+<span class="token parameter variable">--name</span> kibana <span class="token punctuation">\</span>
+<span class="token parameter variable">-e</span> <span class="token assign-left variable">ELASTICSEARCH_HOSTS</span><span class="token operator">=</span>http://es:9200 <span class="token punctuation">\</span>
+<span class="token parameter variable">--network</span><span class="token operator">=</span>es-net <span class="token punctuation">\</span>
+<span class="token parameter variable">-p</span> <span class="token number">5601</span>:5601  <span class="token punctuation">\</span>
+kibana:7.12.1
+</code></pre></div><ul><li><code>--network es-net</code> ：加入一个名为es-net的网络中，与elasticsearch在同一个网络中</li> <li><code>-e ELASTICSEARCH_HOSTS=http://es:9200&quot;</code>：设置elasticsearch的地址，因为kibana已经与elasticsearch在一个网络，因此可以用容器名直接访问elasticsearch</li> <li><code>-p 5601:5601</code>：端口映射配置</li></ul> <p>kibana启动一般比较慢，需要多等待一会，可以通过命令：</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">docker</span> logs <span class="token parameter variable">-f</span> kibana
+</code></pre></div><p>查看运行日志，当查看到下面的日志，说明成功：</p> <p><img src="/x14n-blog/assets/img/image-20210109105135812.05df0bd4.png" alt="image-20210109105135812"></p> <p>此时，在浏览器输入地址访问：http://192.168.150.101:5601，即可看到结果</p> <h2 id="_2-2-devtools"><a href="#_2-2-devtools" class="header-anchor">#</a> 2.2.DevTools</h2> <p>kibana中提供了一个DevTools界面：</p> <p><img src="/x14n-blog/assets/img/image-20210506102630393.d6e6a361.png" alt="image-20210506102630393"></p> <p>这个界面中可以编写DSL来操作elasticsearch。并且对DSL语句有自动补全功能。</p> <h1 id="_3-安装ik分词器"><a href="#_3-安装ik分词器" class="header-anchor">#</a> 3.安装IK分词器</h1> <h2 id="_3-1-在线安装ik插件-较慢"><a href="#_3-1-在线安装ik插件-较慢" class="header-anchor">#</a> 3.1.在线安装ik插件（较慢）</h2> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 进入容器内部</span>
+<span class="token function">docker</span> <span class="token builtin class-name">exec</span> <span class="token parameter variable">-it</span> elasticsearch /bin/bash
+
+<span class="token comment"># 在线下载并安装</span>
+./bin/elasticsearch-plugin  <span class="token function">install</span> https://github.com/medcl/elasticsearch-analysis-ik/releases/download/v7.12.1/elasticsearch-analysis-ik-7.12.1.zip
+
+<span class="token comment">#退出</span>
+<span class="token builtin class-name">exit</span>
+<span class="token comment">#重启容器</span>
+<span class="token function">docker</span> restart elasticsearch
+</code></pre></div><h2 id="_3-2-离线安装ik插件-推荐"><a href="#_3-2-离线安装ik插件-推荐" class="header-anchor">#</a> 3.2.离线安装ik插件（推荐）</h2> <h3 id="_1-查看数据卷目录"><a href="#_1-查看数据卷目录" class="header-anchor">#</a> 1）查看数据卷目录</h3> <p>安装插件需要知道elasticsearch的plugins目录位置，而我们用了数据卷挂载，因此需要查看elasticsearch的数据卷目录，通过下面命令查看:</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">docker</span> volume inspect es-plugins
+</code></pre></div><p>显示结果：</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+        <span class="token property">&quot;CreatedAt&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2022-05-06T10:06:34+08:00&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;Driver&quot;</span><span class="token operator">:</span> <span class="token string">&quot;local&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;Labels&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;Mountpoint&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/var/lib/docker/volumes/es-plugins/_data&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;Name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;es-plugins&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;Options&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;Scope&quot;</span><span class="token operator">:</span> <span class="token string">&quot;local&quot;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+</code></pre></div><p>说明plugins目录被挂载到了：<code>/var/lib/docker/volumes/es-plugins/_data</code>这个目录中。</p> <h3 id="_2-解压缩分词器安装包"><a href="#_2-解压缩分词器安装包" class="header-anchor">#</a> 2）解压缩分词器安装包</h3> <p>下面我们需要把课前资料中的ik分词器解压缩，重命名为ik</p> <p><img src="/x14n-blog/assets/img/image-20210506110249144.354b2be9.png" alt="image-20210506110249144"></p> <h3 id="_3-上传到es容器的插件数据卷中"><a href="#_3-上传到es容器的插件数据卷中" class="header-anchor">#</a> 3）上传到es容器的插件数据卷中</h3> <p>也就是<code>/var/lib/docker/volumes/es-plugins/_data</code>：</p> <p><img src="/x14n-blog/assets/img/image-20210506110704293.d0c1f531.png" alt="image-20210506110704293"></p> <h3 id="_4-重启容器"><a href="#_4-重启容器" class="header-anchor">#</a> 4）重启容器</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 4、重启容器</span>
+<span class="token function">docker</span> restart es
+</code></pre></div><div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># 查看es日志</span>
+<span class="token function">docker</span> logs <span class="token parameter variable">-f</span> es
+</code></pre></div><h3 id="_5-测试"><a href="#_5-测试" class="header-anchor">#</a> 5）测试：</h3> <p>IK分词器包含两种模式：</p> <ul><li><p><code>ik_smart</code>：最少切分</p></li> <li><p><code>ik_max_word</code>：最细切分</p></li></ul> <div class="language-json extra-class"><pre class="language-json"><code>GET /_analyze
+<span class="token punctuation">{</span>
+  <span class="token property">&quot;analyzer&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ik_max_word&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;text&quot;</span><span class="token operator">:</span> <span class="token string">&quot;黑马程序员学习java太棒了&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>结果：</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;tokens&quot;</span> <span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;token&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;黑马&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;start_offset&quot;</span> <span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;end_offset&quot;</span> <span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;type&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;CN_WORD&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;position&quot;</span> <span class="token operator">:</span> <span class="token number">0</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;token&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;程序员&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;start_offset&quot;</span> <span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;end_offset&quot;</span> <span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;type&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;CN_WORD&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;position&quot;</span> <span class="token operator">:</span> <span class="token number">1</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;token&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;程序&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;start_offset&quot;</span> <span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;end_offset&quot;</span> <span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;type&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;CN_WORD&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;position&quot;</span> <span class="token operator">:</span> <span class="token number">2</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;token&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;员&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;start_offset&quot;</span> <span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;end_offset&quot;</span> <span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;type&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;CN_CHAR&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;position&quot;</span> <span class="token operator">:</span> <span class="token number">3</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;token&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;学习&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;start_offset&quot;</span> <span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;end_offset&quot;</span> <span class="token operator">:</span> <span class="token number">7</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;type&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;CN_WORD&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;position&quot;</span> <span class="token operator">:</span> <span class="token number">4</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;token&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;java&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;start_offset&quot;</span> <span class="token operator">:</span> <span class="token number">7</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;end_offset&quot;</span> <span class="token operator">:</span> <span class="token number">11</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;type&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;ENGLISH&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;position&quot;</span> <span class="token operator">:</span> <span class="token number">5</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;token&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;太棒了&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;start_offset&quot;</span> <span class="token operator">:</span> <span class="token number">11</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;end_offset&quot;</span> <span class="token operator">:</span> <span class="token number">14</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;type&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;CN_WORD&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;position&quot;</span> <span class="token operator">:</span> <span class="token number">6</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;token&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;太棒&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;start_offset&quot;</span> <span class="token operator">:</span> <span class="token number">11</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;end_offset&quot;</span> <span class="token operator">:</span> <span class="token number">13</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;type&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;CN_WORD&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;position&quot;</span> <span class="token operator">:</span> <span class="token number">7</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;token&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;了&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;start_offset&quot;</span> <span class="token operator">:</span> <span class="token number">13</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;end_offset&quot;</span> <span class="token operator">:</span> <span class="token number">14</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;type&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;CN_CHAR&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;position&quot;</span> <span class="token operator">:</span> <span class="token number">8</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="_3-3-扩展词词典"><a href="#_3-3-扩展词词典" class="header-anchor">#</a> 3.3 扩展词词典</h2> <p>随着互联网的发展，“造词运动”也越发的频繁。出现了很多新的词语，在原有的词汇列表中并不存在。比如：“奥力给”，“传智播客” 等。</p> <p>所以我们的词汇也需要不断的更新，IK分词器提供了扩展词汇的功能。</p> <p>1）打开IK分词器config目录：</p> <p><img src="/x14n-blog/assets/img/image-20210506112225508.300fe0ea.png" alt="image-20210506112225508"></p> <p>2）在IKAnalyzer.cfg.xml配置文件内容添加：</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token prolog">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">properties</span> <span class="token name">SYSTEM</span> <span class="token string">&quot;http://java.sun.com/dtd/properties.dtd&quot;</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>properties</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>comment</span><span class="token punctuation">&gt;</span></span>IK Analyzer 扩展配置<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>comment</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!--用户可以在这里配置自己的扩展字典 *** 添加扩展词典--&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>entry</span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>ext_dict<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>ext.dic<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>entry</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>properties</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>3）新建一个 ext.dic，可以参考config目录下复制一个配置文件进行修改</p> <div class="language-properties extra-class"><pre class="language-properties"><code>传智播客
+奥力给
+</code></pre></div><p>4）重启elasticsearch</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">docker</span> restart es
+
+<span class="token comment"># 查看 日志</span>
+<span class="token function">docker</span> logs <span class="token parameter variable">-f</span> elasticsearch
+</code></pre></div><p><img src="/x14n-blog/assets/img/image-20201115230900504.3b93cbf5.png" alt="image-20201115230900504"></p> <p>日志中已经成功加载ext.dic配置文件</p> <p>5）测试效果：</p> <div class="language-json extra-class"><pre class="language-json"><code>GET /_analyze
+<span class="token punctuation">{</span>
+  <span class="token property">&quot;analyzer&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ik_max_word&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;text&quot;</span><span class="token operator">:</span> <span class="token string">&quot;传智播客Java就业超过90%,奥力给！&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><blockquote><p>注意当前文件的编码必须是 UTF-8 格式，严禁使用Windows记事本编辑</p></blockquote> <h2 id="_3-4-停用词词典"><a href="#_3-4-停用词词典" class="header-anchor">#</a> 3.4 停用词词典</h2> <p>在互联网项目中，在网络间传输的速度很快，所以很多语言是不允许在网络上传递的，如：关于宗教、政治等敏感词语，那么我们在搜索时也应该忽略当前词汇。</p> <p>IK分词器也提供了强大的停用词功能，让我们在索引时就直接忽略当前的停用词汇表中的内容。</p> <p>1）IKAnalyzer.cfg.xml配置文件内容添加：</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token prolog">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">properties</span> <span class="token name">SYSTEM</span> <span class="token string">&quot;http://java.sun.com/dtd/properties.dtd&quot;</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>properties</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>comment</span><span class="token punctuation">&gt;</span></span>IK Analyzer 扩展配置<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>comment</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!--用户可以在这里配置自己的扩展字典--&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>entry</span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>ext_dict<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>ext.dic<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>entry</span><span class="token punctuation">&gt;</span></span>
+         <span class="token comment">&lt;!--用户可以在这里配置自己的扩展停止词字典  *** 添加停用词词典--&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>entry</span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>ext_stopwords<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>stopword.dic<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>entry</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>properties</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>3）在 stopword.dic 添加停用词</p> <div class="language-properties extra-class"><pre class="language-properties"><code>习大大
+</code></pre></div><p>4）重启elasticsearch</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># 重启服务</span>
+<span class="token function">docker</span> restart elasticsearch
+<span class="token function">docker</span> restart kibana
+
+<span class="token comment"># 查看 日志</span>
+<span class="token function">docker</span> logs <span class="token parameter variable">-f</span> elasticsearch
+</code></pre></div><p>日志中已经成功加载stopword.dic配置文件</p> <p>5）测试效果：</p> <div class="language-json extra-class"><pre class="language-json"><code>GET /_analyze
+<span class="token punctuation">{</span>
+  <span class="token property">&quot;analyzer&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ik_max_word&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;text&quot;</span><span class="token operator">:</span> <span class="token string">&quot;传智播客Java就业率超过95%,习大大都点赞,奥力给！&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><blockquote><p>注意当前文件的编码必须是 UTF-8 格式，严禁使用Windows记事本编辑</p></blockquote> <h1 id="_4-部署es集群"><a href="#_4-部署es集群" class="header-anchor">#</a> 4.部署es集群</h1> <p>部署es集群可以直接使用docker-compose来完成，不过要求你的Linux虚拟机至少有<strong>4G</strong>的内存空间</p> <p>首先编写一个docker-compose文件，内容如下：</p> <div class="language-sh extra-class"><pre class="language-sh"><code>version: <span class="token string">'2.2'</span>
+services:
+  es01:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.12.1
+    container_name: es01
+    environment:
+      - <span class="token assign-left variable">node.name</span><span class="token operator">=</span>es01
+      - <span class="token assign-left variable">cluster.name</span><span class="token operator">=</span>es-docker-cluster
+      - <span class="token assign-left variable">discovery.seed_hosts</span><span class="token operator">=</span>es02,es03
+      - <span class="token assign-left variable">cluster.initial_master_nodes</span><span class="token operator">=</span>es01,es02,es03
+      - <span class="token assign-left variable">bootstrap.memory_lock</span><span class="token operator">=</span>true
+      - <span class="token string">&quot;ES_JAVA_OPTS=-Xms512m -Xmx512m&quot;</span>
+    ulimits:
+      memlock:
+        soft: <span class="token parameter variable">-1</span>
+        hard: <span class="token parameter variable">-1</span>
+    volumes:
+      - data01:/usr/share/elasticsearch/data
+    ports:
+      - <span class="token number">9200</span>:9200
+    networks:
+      - elastic
+  es02:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.12.1
+    container_name: es02
+    environment:
+      - <span class="token assign-left variable">node.name</span><span class="token operator">=</span>es02
+      - <span class="token assign-left variable">cluster.name</span><span class="token operator">=</span>es-docker-cluster
+      - <span class="token assign-left variable">discovery.seed_hosts</span><span class="token operator">=</span>es01,es03
+      - <span class="token assign-left variable">cluster.initial_master_nodes</span><span class="token operator">=</span>es01,es02,es03
+      - <span class="token assign-left variable">bootstrap.memory_lock</span><span class="token operator">=</span>true
+      - <span class="token string">&quot;ES_JAVA_OPTS=-Xms512m -Xmx512m&quot;</span>
+    ulimits:
+      memlock:
+        soft: <span class="token parameter variable">-1</span>
+        hard: <span class="token parameter variable">-1</span>
+    volumes:
+      - data02:/usr/share/elasticsearch/data
+    networks:
+      - elastic
+  es03:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.12.1
+    container_name: es03
+    environment:
+      - <span class="token assign-left variable">node.name</span><span class="token operator">=</span>es03
+      - <span class="token assign-left variable">cluster.name</span><span class="token operator">=</span>es-docker-cluster
+      - <span class="token assign-left variable">discovery.seed_hosts</span><span class="token operator">=</span>es01,es02
+      - <span class="token assign-left variable">cluster.initial_master_nodes</span><span class="token operator">=</span>es01,es02,es03
+      - <span class="token assign-left variable">bootstrap.memory_lock</span><span class="token operator">=</span>true
+      - <span class="token string">&quot;ES_JAVA_OPTS=-Xms512m -Xmx512m&quot;</span>
+    ulimits:
+      memlock:
+        soft: <span class="token parameter variable">-1</span>
+        hard: <span class="token parameter variable">-1</span>
+    volumes:
+      - data03:/usr/share/elasticsearch/data
+    networks:
+      - elastic
+
+volumes:
+  data01:
+    driver: <span class="token builtin class-name">local</span>
+  data02:
+    driver: <span class="token builtin class-name">local</span>
+  data03:
+    driver: <span class="token builtin class-name">local</span>
+
+networks:
+  elastic:
+    driver: bridge
+</code></pre></div><p>Run <code>docker-compose</code> to bring up the cluster:</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">docker-compose</span> up
+</code></pre></div></div></section> <footer class="page-edit"><!----> <!----></footer> <!----> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-b57cc07c data-v-7dd95ae2><li class="level-2" data-v-b57cc07c><a href="/x14n-blog/views/xue-xi/fen-bu-shi/ke-wai/an-zhuang-elasticsearch.html#_1-1-创建网络" class="sidebar-link reco-side-_1-1-创建网络" data-v-b57cc07c>1.1.创建网络</a></li><li class="level-2" data-v-b57cc07c><a href="/x14n-blog/views/xue-xi/fen-bu-shi/ke-wai/an-zhuang-elasticsearch.html#_1-2-加载镜像" class="sidebar-link reco-side-_1-2-加载镜像" data-v-b57cc07c>1.2.加载镜像</a></li><li class="level-2" data-v-b57cc07c><a href="/x14n-blog/views/xue-xi/fen-bu-shi/ke-wai/an-zhuang-elasticsearch.html#_1-3-运行" class="sidebar-link reco-side-_1-3-运行" data-v-b57cc07c>1.3.运行</a></li><li class="level-2" data-v-b57cc07c><a href="/x14n-blog/views/xue-xi/fen-bu-shi/ke-wai/an-zhuang-elasticsearch.html#_2-1-部署" class="sidebar-link reco-side-_2-1-部署" data-v-b57cc07c>2.1.部署</a></li><li class="level-2" data-v-b57cc07c><a href="/x14n-blog/views/xue-xi/fen-bu-shi/ke-wai/an-zhuang-elasticsearch.html#_2-2-devtools" class="sidebar-link reco-side-_2-2-devtools" data-v-b57cc07c>2.2.DevTools</a></li><li class="level-2" data-v-b57cc07c><a href="/x14n-blog/views/xue-xi/fen-bu-shi/ke-wai/an-zhuang-elasticsearch.html#_3-1-在线安装ik插件-较慢" class="sidebar-link reco-side-_3-1-在线安装ik插件-较慢" data-v-b57cc07c>3.1.在线安装ik插件（较慢）</a></li><li class="level-2" data-v-b57cc07c><a href="/x14n-blog/views/xue-xi/fen-bu-shi/ke-wai/an-zhuang-elasticsearch.html#_3-2-离线安装ik插件-推荐" class="sidebar-link reco-side-_3-2-离线安装ik插件-推荐" data-v-b57cc07c>3.2.离线安装ik插件（推荐）</a></li><li class="level-3" data-v-b57cc07c><a href="/x14n-blog/views/xue-xi/fen-bu-shi/ke-wai/an-zhuang-elasticsearch.html#_1-查看数据卷目录" class="sidebar-link reco-side-_1-查看数据卷目录" data-v-b57cc07c>1）查看数据卷目录</a></li><li class="level-3" data-v-b57cc07c><a href="/x14n-blog/views/xue-xi/fen-bu-shi/ke-wai/an-zhuang-elasticsearch.html#_2-解压缩分词器安装包" class="sidebar-link reco-side-_2-解压缩分词器安装包" data-v-b57cc07c>2）解压缩分词器安装包</a></li><li class="level-3" data-v-b57cc07c><a href="/x14n-blog/views/xue-xi/fen-bu-shi/ke-wai/an-zhuang-elasticsearch.html#_3-上传到es容器的插件数据卷中" class="sidebar-link reco-side-_3-上传到es容器的插件数据卷中" data-v-b57cc07c>3）上传到es容器的插件数据卷中</a></li><li class="level-3" data-v-b57cc07c><a href="/x14n-blog/views/xue-xi/fen-bu-shi/ke-wai/an-zhuang-elasticsearch.html#_4-重启容器" class="sidebar-link reco-side-_4-重启容器" data-v-b57cc07c>4）重启容器</a></li><li class="level-3" data-v-b57cc07c><a href="/x14n-blog/views/xue-xi/fen-bu-shi/ke-wai/an-zhuang-elasticsearch.html#_5-测试" class="sidebar-link reco-side-_5-测试" data-v-b57cc07c>5）测试：</a></li><li class="level-2" data-v-b57cc07c><a href="/x14n-blog/views/xue-xi/fen-bu-shi/ke-wai/an-zhuang-elasticsearch.html#_3-3-扩展词词典" class="sidebar-link reco-side-_3-3-扩展词词典" data-v-b57cc07c>3.3 扩展词词典</a></li><li class="level-2" data-v-b57cc07c><a href="/x14n-blog/views/xue-xi/fen-bu-shi/ke-wai/an-zhuang-elasticsearch.html#_3-4-停用词词典" class="sidebar-link reco-side-_3-4-停用词词典" data-v-b57cc07c>3.4 停用词词典</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/x14n-blog/assets/js/app.0bf6b832.js" defer></script><script src="/x14n-blog/assets/js/7.5ae92d3c.js" defer></script><script src="/x14n-blog/assets/js/2.f34688e4.js" defer></script><script src="/x14n-blog/assets/js/1.8dfff511.js" defer></script><script src="/x14n-blog/assets/js/39.6bac3f2d.js" defer></script>
+  </body>
+</html>
